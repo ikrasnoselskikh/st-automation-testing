@@ -1,7 +1,7 @@
 Before do
-  puts("Before hook")
+  $driver.start_driver
 end
 
 After do
-  puts("After hook")
+  $driver.driver_quit
 end
