@@ -11,15 +11,19 @@ Then(/^I land on Area screen$/) do
 end
 
 When(/^I click on Swap button$/) do
-  puts("User clicks on Swap button")
+  find_element(id:"fab").click
 end
 
 Then(/^I see "([^"]*)" in From header$/) do |value|
-  puts("From header value is " + value)
+  actual_value = find_element(id:"header_text_unit_from").text
+  puts("Expected value is #{value}")
+  puts("Actual value is #{actual_value}")
 end
 
 And(/^I see "([^"]*)" in To header$/) do |value|
-  puts("To header value is #{value}")
+  actual_value = find_element(id:"header_text_unit_to").text
+  puts("Expected value is #{value}")
+  puts("Actual value is #{actual_value}")
 end
 
 And(/^I click on Clear button$/) do
