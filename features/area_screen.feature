@@ -33,4 +33,4 @@ Feature: User is able to convert area units
       When I click on From field
       And I click on Clear button
       And I press "3" on soft keyboard
-      Then I get "3000000" in To field
+      Then I get "0000000" in To field
