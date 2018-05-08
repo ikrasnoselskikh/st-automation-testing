@@ -27,13 +27,15 @@ And(/^I see "([^"]*)" in To header$/) do |value|
 end
 
 And(/^I click on Clear button$/) do
-  puts("User clicks on Clear button")
+  find_element(id:"menu_clear").click
 end
 
 When(/^I enter "([^"]*)" to From field$/) do |value|
-  puts("User entered value #{value}")
+  find_element(id:"header_value_from").send_keys(value)
 end
 
 Then(/^I get "([^"]*)" in To field$/) do |value|
-  puts("User sees value #{value} in result field")
+  actual_value = find_element(id:"header_value_to").text
+  puts("Expected value is #{value}")
+  puts("Actual value is #{actual_value}")
 end
