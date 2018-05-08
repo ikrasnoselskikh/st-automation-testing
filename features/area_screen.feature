@@ -2,8 +2,9 @@
 Feature: User is able to convert area units
 
   Background:
-    Given I click on Got it button
-    And I land on Area screen
+    Given I land on "Help" popup
+    And I click on "Got It" button
+    And I land on "Area" screen
 
 #  Scenario: User is able to dismiss help
 #    Given I land on help popup
@@ -29,8 +30,14 @@ Feature: User is able to convert area units
     |3     |3000000|
 
   @wip
-    Scenario: User is able to use soft keyboard to enter values
-      When I click on From field
-      And I click on Clear button
-      And I press "12" on soft keyboard
-      Then I get "12000000" in To field
+  Scenario: User is able to use soft keyboard to enter values
+    When I click on From field
+    And I click on Clear button
+    And I press "12" on soft keyboard
+    Then I get "12000000" in To field
+
+
+  Scenario:
+    When User select "Hectare" from left column
+    Then I see "Hectare" in From header
+    And I get "10000" in To field
