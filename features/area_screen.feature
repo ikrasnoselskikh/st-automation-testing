@@ -32,5 +32,5 @@ Feature: User is able to convert area units
     Scenario: User is able to use soft keyboard to enter values
       When I click on From field
       And I click on Clear button
-      And I press "3" on soft keyboard
-      Then I get "0000000" in To field
+      And I press "12" on soft keyboard
+      Then I get "12000000" in To field
