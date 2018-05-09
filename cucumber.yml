@@ -4,3 +4,4 @@ wip: -t @wip --format html --out report_wip.html --format pretty
 
 any: -t @volume, @area, @wip --format html --out report_any.html --format pretty
 wip_area: -t @area -t @wip --format html --out report_wip_area.html --format pretty
+all: --init --format html --out report_all.html --format pretty
