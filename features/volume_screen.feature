@@ -16,6 +16,6 @@ Feature: User is able to convert Volume units
 
     Examples:
     |target|result|
-#    |Power |Power |
-    |Volume1|Volume|
-#    |Currency|Currency|
+    |Power |Power |
+    |Volume|Volume|
+    |Currency|Currency|
