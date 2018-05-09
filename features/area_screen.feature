@@ -29,7 +29,6 @@ Feature: User is able to convert area units
     |2     |2000000|
     |3     |3000000|
 
-  @wip
   Scenario: User is able to use soft keyboard to enter values
     When I click on From field
     And I click on Clear button
