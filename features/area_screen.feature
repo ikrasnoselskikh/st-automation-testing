@@ -41,3 +41,16 @@ Feature: User is able to convert area units
     When User select "Hectare" from left column
     Then I see "Hectare" in From header
     And I get "10000" in To field
+
+  @homework4
+  Scenario Outline: User is able to convert values to 3 different units
+    Given I click on Clear button
+    When I enter "<target>" to From field
+    And User select "<radio>" from right column
+    Then I get "<result>" in To field
+
+    Examples:
+    |target|radio|result|
+    |100   |Sq Kilometre|100|
+    |200   |Sq Metre|200000000|
+    |300   |Hectare|30000|

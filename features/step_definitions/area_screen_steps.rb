@@ -82,3 +82,7 @@ And(/^I land on "([^"]*)" screen$/) do |value|
     fail("Expected text of popup Title must be #{value}. But actual is #{actual_text}")
   end
 end
+
+And(/^User select "([^"]*)" from right column$/) do |value|
+  find_element(id:"radio_group_to").find_element(xpath:"//android.widget.RadioButton[@text='#{value}']").click
+end
